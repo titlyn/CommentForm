@@ -76,7 +76,6 @@ button {
     height: 2rem;
     width: 8rem;
     border: none;
-    background-color: ;
 }
 
 .sidebar {
@@ -209,9 +208,9 @@ textarea {
     cursor: pointer;
     align-items: center;
     padding: 10px;
-    background-color: #BC9C75;
-    width: 20vh;
+    background-color: #242425;
     border-radius: 6px;
+    justify-content: center;
 }
 
 .retour .side-ico {
@@ -220,5 +219,25 @@ textarea {
 }
 
 .retour .nav-text {
-    margin-left: 10px;
+    
+}
+
+.details {
+    padding: 20px;
+    border: 1.5px solid #BC9C75;
+    border-radius: 20px;
+}
+
+.retour-btn {
+    display: flex;
+    padding: 20px 0;
+    justify-content: flex-end;
+}
+
+.retour-btn button {
+    height: 2.5rem;
+    background-color: #BC9C75;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
 }

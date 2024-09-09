@@ -50,7 +50,13 @@ function saveForm() {
     formEntries.push(newEntry);
     localStorage.setItem('formEntries', JSON.stringify(formEntries));
 
-    alert("Formulaire sauvegardé avec succès !");
+    swal({
+        title: "Formulaire envoyé !",
+        text: "Merci de votre participation.",
+        icon: "success",
+        button: "OK",
+    });
+
     showForm();
 }
 
@@ -91,15 +97,31 @@ function showDetails(id) {
     const formEntries = JSON.parse(localStorage.getItem('formEntries'));
     const entry = formEntries.find(e => e.id === id);
 
+
+            // Créer la chaîne d'étoiles en fonction de la note
+    let stars = '';
+        for (let i = 1; i <= 10; i++) {
+            if (i <= entry.rating) {
+                stars += '★'; // Étoile remplie
+            } else {
+                stars += '☆'; // Étoile vide
+            }
+        }
+
     if (entry) {
         document.getElementById('content').innerHTML = `
-                <h2>Details du formulaire #${entry.id}</h2>
-                <p><strong>Nom : </strong> ${entry.name}</p>
-                <p><strong>Note : </strong> ${entry.rating}</p>
-                <p><strong>Commentaire : </strong> ${entry.comment}</p>
-                <button onclick="showList()">Retour</button>
+                <h2>Details du formulaire ${entry.id}</h2>
+                <div class="details">
+                    <p><strong>Nom : </strong> ${entry.name}</p>
+                    <p><strong>Note : </strong><span class="star-rating"> ${stars} : ${entry.rating}</span></p>
+                    <p><strong>Commentaire : </strong> ${entry.comment}</p>
+                </div> 
+                <div class="retour-btn">
+                    <button onclick="showList()">Retour</button>       
+                </div>        
         `
     }
+
     console.log(entry);
     
 }
@@ -119,3 +141,4 @@ document.addEventListener('DOMContentLoaded', ()=> {
 function clearForm() {
     document.getElementById('form').reset();
 }
+
