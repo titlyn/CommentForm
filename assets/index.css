@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Monserrat-light;
+    src: url(../font/montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: artico-light;
+    src: url(../font/artico/cretype\ \ Artico\ Light.otf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family:artico-light;
+}
+
+.hero-section {
+    font-family: ;
+    position: relative;
+    background-image: url('./lrhv.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Superposition noire avec 50% d'opacité */
+    z-index: 1; /* Place l'overlay derrière le contenu */
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+}
+
+.logo img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content, .hero-stats {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    padding: 20px 30px;
+    font-size: 1rem;
+    color: #38383A;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background-color: #BC9C75;
+    color: white;
+}
+
+.hero-stats {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.customers {
+    display: flex;
+    align-items: center;
+}
+
+.customers span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.customer-avatars img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: -10px; /* Overlap effect */
+    border: 2px solid white; /* To create the white border effect */
+}

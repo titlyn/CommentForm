@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="../assets/rhv.jpeg" type="image/x-icon">
+        <title>Tableau de bord</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <div class="dashboard">
+            <nav class="sidebar">
+                <div class="title">
+                    <img src="../assets/rhv.jpeg" alt="rhv">
+                    <div class="text">
+                        <p>Le Relais de la Haute Ville</p>
+                    </div>
+                </div>
+                <ul>
+                    <div class="button" onclick="showForm()">
+                        <img class="side-ico" src="../assets/document.ico" alt="form">
+                        <p class="nav-text">Formulaire</p>
+                    </div>
+                    <div class="button" onclick="showList()">
+                        <img class="side-ico" src="../assets/form.png" alt="form">
+                        <p class="nav-text">Liste des formulaires</p>
+                    </div>
+                    <div class="retour" onclick="window.location.href='../index.html'">
+                        <img class="side-ico" src="../assets/left.png" alt="">
+                        <p class="nav-text">Retour</p>
+                    </div>
+                </ul>
+            </nav>
+            <div class="content" id="content">
+                <div class="temporary">
+                    <img src="../assets/rhv.jpeg" alt="hotel">
+                </div>
+            </div>
+        </div>
+    <script src="../script/dashboard.js"></script>
+    </body>
+</html>

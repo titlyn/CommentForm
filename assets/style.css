@@ -1,0 +1,224 @@
+@font-face {
+    font-family: artico-light;
+    src: url(../font/artico/cretype\ \ Artico\ Light.otf);
+}
+
+body {
+    font-family: artico-light;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 2.5rem;
+    margin: 10px 0 10px 0;
+    border: 1px solid #85333A;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+label {
+    margin:10px 0 10px 0;
+}
+
+select {
+
+    margin: 10px 0 10px 0;
+    height: 2.5rem;
+    border-radius: 10px;
+}
+
+.button {
+    display: flex;
+    height: 2rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.button.active {
+    background-color: #BC9C75;
+}
+
+.dashboard {
+    display: flex;
+    flex: 1;
+}
+
+.title {
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.title img{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.title .text {
+    margin: 0 0 0 30px;
+}
+
+.title .text p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button {
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    background-color: ;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #39393B;
+    padding: 10px;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    position: fixed; /* Fixe la sidebar sur le côté gauche */
+    top: 0; /* Aligne en haut de la fenêtre */
+    left: 0; /* Aligne sur le bord gauche */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse la hauteur */
+    color: white;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.sidebar ul .button {
+    margin: 20px 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 0 80px;
+    margin-left: 320px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border: 1.5px solid #BC9C75;
+    padding: 2px 20px;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3 {
+    color: #39393B;
+    font-weight: bold;
+}
+
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#comment {
+    height: 10rem;
+    border-radius: 10px;
+}
+
+.side-ico {
+    width: 20px;
+    margin: 0 20px 0 0;
+    color: white;
+}
+
+h2 {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.submit {
+    background-color: #BC9C75;
+    height: 2.5rem;
+    width: 40vh;
+    color: white;
+    border-radius: 20px;
+    font-family: artico-light;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.star-rating {
+    font-size: 20px; /* Ajuster la taille des étoiles */
+    color: goldenrod; /* Ajuster la couleur des étoiles */
+}
+
+
+.comment-preview {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Nombre de lignes à afficher */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.temporary {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    padding: 0 10px;
+}
+
+textarea {
+    padding: 10px;
+}
+
+.retour {
+    margin-top: 50vh;
+    display: flex;
+    height: 2rem;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px;
+    background-color: #BC9C75;
+    width: 20vh;
+    border-radius: 6px;
+}
+
+.retour .side-ico {
+    height: 20px;
+    width: 10px;
+}
+
+.retour .nav-text {
+    margin-left: 10px;
+}
